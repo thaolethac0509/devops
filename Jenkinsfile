@@ -11,17 +11,17 @@ pipeline {
         }
         stage('Stop Current Containers') {
             steps {
-                sh 'docker compose down || true'
+                bat 'docker compose down || true'
             }
         }
         stage('Build & Start Docker Compose') {
             steps {
-                sh 'docker compose up -d --build'
+                bat 'docker compose up -d --build'
             }
         }
         stage('List Running Containers') {
             steps {
-                sh 'docker ps'
+                bat 'docker ps'
             }
         }
     }
