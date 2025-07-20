@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h1>Todo List</h1>
+    <h1>Todo List - {{ datetime }}</h1>
     <input v-model="newTodo" @keyup.enter="addNewTodo" />
     <ul>
-      <li v-for="todo in todos" :key="todo.id">{{ todo.title }}</li>
+      <li v-for="todo in todos" :key="todo.id">{{ todo.title }} </li>
     </ul>
   </div>
 </template>
@@ -15,7 +15,10 @@ import { getTodos, addTodo } from './services/todoService';
 const todos = ref([]);
 const newTodo = ref('');
 
+const datetime = ref("")
+
 const fetchTodos = async () => {
+  datetime.value = Date.now()
   const res = await getTodos();
   todos.value = res.data;
 };
