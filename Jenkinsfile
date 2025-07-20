@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        COMPOSE_PROJECT_NAME = "Devops"
+        COMPOSE_PROJECT_NAME = "devopsnews"
     }
 
     stages {
