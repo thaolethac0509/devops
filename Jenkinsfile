@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    triggers {
+        // Tự động build khi có push từ GitHub webhook
+        githubPush()
+    }
+
     environment {
         COMPOSE_PROJECT_NAME = "devopsnews"
     }
@@ -16,7 +21,7 @@ pipeline {
             steps {
                 script {
                     bat '''
-                        echo Stopping containers...
+                        echo Stopping containers if exist...
                         docker-compose down || exit 0
                     '''
                 }
@@ -43,6 +48,18 @@ pipeline {
                     '''
                 }
             }
+        }
+    }
+
+    post {
+        always {
+            echo "Pipeline finished!"
+        }
+        failure {
+            echo "Build failed!"
+        }
+        success {
+            echo "Build succeeded!"
         }
     }
 }
