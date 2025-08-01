@@ -1,0 +1,63 @@
+name: CI/CD Pipeline with Docker Compose
+
+on:
+  push:
+    branches: [main]
+
+env:
+  DOCKER_USER: ${{ secrets.DOCKER_USERNAME }}
+  DOCKER_PASS: ${{ secrets.DOCKER_PASSWORD }}
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to Docker Hub
+        run: echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
+
+      - name: Build and tag frontend image
+        run: docker build -t $DOCKER_USER/vue-frontend ./frontend
+
+      - name: Build and tag backend image
+        run: docker build -t $DOCKER_USER/dotnet-backend ./backend
+
+      - name: Push frontend image
+        run: docker push $DOCKER_USER/vue-frontend
+
+      - name: Push backend image
+        run: docker push $DOCKER_USER/dotnet-backend
+
+  docker-compose-test:
+    runs-on: ubuntu-latest
+    needs: build-and-push
+
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: 123456
+          POSTGRES_DB: todo_db
+        ports:
+          - 5432:5432
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Compose
+        run: |
+          docker compose -f docker-compose.yml up -d
+          sleep 20 # wait for services to be ready
+
+      - name: Test backend health (optional)
+        run: |
+          curl --fail http://localhost:5000/swagger || exit 1
+
+      - name: Test frontend health (optional)
+        run: |
+          curl --fail http://localhost:5173 || exit 1

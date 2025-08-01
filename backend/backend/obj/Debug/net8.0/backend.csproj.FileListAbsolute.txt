@@ -29,11 +29,6 @@ C:\Users\thaol\Desktop\DevOps\backend\backend\obj\Debug\net8.0\backend.MvcApplic
 C:\Users\thaol\Desktop\DevOps\backend\backend\obj\Debug\net8.0\backend.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\thaol\Desktop\DevOps\backend\backend\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\thaol\Desktop\DevOps\backend\backend\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\thaol\Desktop\DevOps\backend\backend\obj\Debug\net8.0\staticwebassets\msbuild.backend.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\thaol\Desktop\DevOps\backend\backend\obj\Debug\net8.0\staticwebassets\msbuild.build.backend.props
-C:\Users\thaol\Desktop\DevOps\backend\backend\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.backend.props
-C:\Users\thaol\Desktop\DevOps\backend\backend\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.backend.props
-C:\Users\thaol\Desktop\DevOps\backend\backend\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\thaol\Desktop\DevOps\backend\backend\obj\Debug\net8.0\scopedcss\bundle\backend.styles.css
 C:\Users\thaol\Desktop\DevOps\backend\backend\obj\Debug\net8.0\backend.csproj.Up2Date
 C:\Users\thaol\Desktop\DevOps\backend\backend\obj\Debug\net8.0\backend.dll
@@ -132,3 +127,12 @@ C:\Users\thaol\Desktop\DevOps\backend\backend\bin\Debug\net8.0\tr\Microsoft.Code
 C:\Users\thaol\Desktop\DevOps\backend\backend\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\thaol\Desktop\DevOps\backend\backend\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\thaol\Desktop\DevOps\backend\backend\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\thaol\Desktop\Devops\backend\backend\bin\Debug\net8.0\backend.staticwebassets.endpoints.json
+C:\Users\thaol\Desktop\Devops\backend\backend\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\thaol\Desktop\Devops\backend\backend\obj\Debug\net8.0\backend.sourcelink.json
+C:\Users\thaol\Desktop\Devops\backend\backend\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\thaol\Desktop\Devops\backend\backend\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\thaol\Desktop\Devops\backend\backend\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\thaol\Desktop\Devops\backend\backend\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\thaol\Desktop\Devops\backend\backend\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\thaol\Desktop\Devops\backend\backend\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

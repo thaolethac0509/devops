@@ -21,6 +21,7 @@ const fetchTodos = async () => {
   datetime.value = Date.now()
   const res = await getTodos();
   todos.value = res.data;
+  console.log("res",res)
 };
 
 const addNewTodo = async () => {
